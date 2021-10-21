@@ -25,7 +25,7 @@ def send_mail_func(self):
         if(details['newRating'] != user.oldrating):
             user.oldrating = details['newRating']
             user.save()
-            send_mail('toi', str(details['newRating']), 'pk6222307@gmail.com', [user.email])
+            send_mail('Codeforces Ratings Update','Your updated ratings are' + str(details['newRating']), 'pk6222307@gmail.com', [user.email])
     
     return 'Done'
 
