@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'send_mail_app',
+    # 'send_mail',
     'django_celery_results',
     'django_celery_beat',
 ]
@@ -143,4 +144,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'  
 EMAIL_PORT = 587  
 EMAIL_HOST_USER = 'gauravbansal062002@gmail.com'  
-EMAIL_HOST_PASSWORD = 'lol'
+EMAIL_HOST_PASSWORD = 'nixwnlntycthdncs'

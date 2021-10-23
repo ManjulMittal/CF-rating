@@ -19,5 +19,6 @@ from django.urls import path
 from mainapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.test),
+    path('', views.home),
+    path('sm', views.send_mail_to_all),
 ]

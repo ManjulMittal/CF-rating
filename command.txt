@@ -1,0 +1,8 @@
+redis:
+    redis-server start
+
+project:
+    python manage.py runserver
+    celery -A celery_with_django worker --pool=solo -l INFO
+    celery -A celery_with_django beat -l INFO
+

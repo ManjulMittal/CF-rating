@@ -23,9 +23,9 @@ def send_mail_func(self):
         details = lastContest[0]
 
         if(details['newRating'] != user.oldrating):
+            send_mail('Codeforces Ratings Update','Your updated ratings are ' + str(details['newRating']) +', with the total change of '+ str(details['newRating']-user.oldrating), '', [user.email])
             user.oldrating = details['newRating']
             user.save()
-            send_mail('Codeforces Ratings Update','Your updated ratings are' + str(details['newRating']), 'pk6222307@gmail.com', [user.email])
     
     return 'Done'
 
