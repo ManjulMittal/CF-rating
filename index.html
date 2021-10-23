@@ -10,9 +10,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap" rel="stylesheet" />
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="mainapp/static/css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 </head>
 
-<body class="img js-fullheight" style="background-image: url('mainapp/static/images/bg.jpg');">
+<body id="content" class="img js-fullheight" style="background-image: url('mainapp/static/images/bg.jpg');">
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -24,7 +26,7 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 						<h3 class="mb-4 text-center">Get Notified when rank changes</h3>
-						<form action="https://akarsh711.github.io/test-page/" method="POST" class="signin-form">
+						<form action="" method="POST" class="signin-form">
 							
 							<div class="form-group">
 								<input class="form-control" placeholder="Username" required="" type="text" name="username" />
@@ -36,7 +38,7 @@
 									toggle="#password-field"></span> -->
 							</div>
 							<div class="form-group">
-								<button class="form-control btn btn-primary submit px-3" type="submit">Register</button>
+								<button onclick="changeContent()" class="form-control btn btn-primary submit px-3" type="submit">Register</button>
 							</div>
 							<!-- <div class="form-group d-md-flex">
 								<div class="w-50">
@@ -69,4 +71,38 @@
 	<script src="mainapp/static/js/main.js"></script>
 </body>
 
+<script>
+	function changeContent(){
+		var cont = `
+			<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6 text-center mb-5">
+						<h2 class="heading-section"><i class="far fa-check-circle"></i>Registered Successfully!</h2>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-6 col-lg-4">
+						<div class="login-wrap p-0">
+							<h3 class="mb-4 text-center">You will be get an email on your registered email address whenever you rating is change</h3>
+							
+							<!--
+							<p class="w-100 text-center">— Or Sign In With —</p>
+							<div class="social d-flex text-center">
+								<a class="px-2 py-2 mr-md-1 rounded" href="#"><span class="ion-logo-facebook mr-2"></span>
+									Facebook</a>
+								<a class="px-2 py-2 ml-md-1 rounded" href="#"><span class="ion-logo-twitter mr-2"></span>
+									Twitter</a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		`
+		document.getElementById("content").innerHTML = cont;
+	
+	}
+</script>
 </html>
