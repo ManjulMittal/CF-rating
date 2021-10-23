@@ -1,4 +1,4 @@
-{% load static %}
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -12,7 +12,7 @@
 	<link href="mainapp/static/css/style.css" rel="stylesheet" />
 </head>
 
-<body class="img js-fullheight" style="background-image: url('mainapp/static/images/bg.jpg'});">
+<body class="img js-fullheight" style="background-image: url('mainapp/static/images/bg.jpg');">
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -25,7 +25,7 @@
 					<div class="login-wrap p-0">
 						<h3 class="mb-4 text-center">Get Notified when rank changes</h3>
 						<form action="/" method="POST" class="signin-form">
-							{% csrf_token %}
+							
 							<div class="form-group">
 								<input class="form-control" placeholder="Username" required="" type="text" name="username" />
 							</div>
